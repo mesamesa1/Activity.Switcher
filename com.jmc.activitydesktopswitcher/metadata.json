@@ -1,0 +1,16 @@
+{
+    "KPlugin": {
+        "Category": "Windows and Tasks",
+        "Description": "Switch between Virtual Desktops and Plasma Activities dynamically from your panel or desktop.",
+        "Icon": "preferences-desktop-virtual",
+        "Id": "com.jmc.activitydesktopswitcher",
+        "Name": "Pill Activities Switcher",
+        "KPackageStructure": "Plasma/Applet",
+        "Version": "1.0"
+    },
+    "KPackageStructure": "Plasma/Applet",
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-Provides": [
+        "org.kde.plasma.windowmanagement"
+    ]
+}
