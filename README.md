@@ -1,6 +1,6 @@
 Activities Switcher (KDE Plasma 6)
 
-![Activity Switcher Demo](screenshots/output.gif) --- You can swap which pill expands
+![Activity Switcher Demo](screenshots/output.gif) ![Activity Switcher Demo](screenshots/output2.gif)
 
 Plasma 6 widget designed to switch between Plasma Activities desktops dynamically. It integrates seamlessly into your Plasma panel or sits directly on your desktop.
 
