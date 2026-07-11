@@ -1,37 +1,34 @@
 Activity & Desktop Switcher (KDE Plasma 6)
 
-A modern, highly customizable Plasma 6 widget designed to switch between Plasma Activities and Virtual Desktops dynamically. It integrates seamlessly into your Plasma panel or sits directly on your desktop as an elegant navigation hub.
+![Activity Switcher Demo](screenshots/output.gif)
+Plasma 6 widget designed to switch between Plasma Activities and Virtual Desktops dynamically. It integrates seamlessly into your Plasma panel or sits directly on your desktop as an elegant navigation hub.
 
 ---
 
 Features
 
-- ** Flexible Layouts & Orientation**
+Flexible Layouts & Orientation
   - Toggle between **Stacked (Vertical)** and **Side-by-Side (Horizontal)** flows.
   - Automatically adapts to panel thickness or desktop constraints.
   
-- ** Shape & Size Customization**
+Shape & Size Customization
   - Multiple button shapes: **Pill**, **Circle**, or **Rectangle**.
   - Custom button widths, heights, scale ratios, and layout spacing.
 
-- **🖌Rich Theming & Per-Activity Styling**
+Theming & Per-Activity Styling
   - Custom **Color Picker** for each running activity.
   - Option to apply custom colors to unselected buttons with custom opacity sliders.
   - **Invert Selection Sizing**: Option to make unselected buttons expand on hover or selection, or shrink/grow based on active states.
 
-- ** Icon & Name Toggle**
+Icon & Name Toggle
   - Choose to show names, icons, or both.
   - Comes with clean default vector bubble number icons (`1` and `2`) for your primary activities.
   - Custom **Icon Picker** (using the standard KDE system icon dialog) to set individual activity icons.
 
-- ** Smooth Easing Animations**
+Smooth Easing Animations
   - Fully adjustable resize transition durations (from `0ms` up to `5000ms`) with smooth `OutCubic` easing behavior.
 
 ---
-
-Screenshots
-
-![Activity Switcher Demo](screenshots/output.gif)
 ![Activity Switcher](screenshots/Screenshot_20260711_083426.png)
 ---
 
