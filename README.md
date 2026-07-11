@@ -5,6 +5,7 @@ Activity & Desktop Switcher (KDE Plasma 6)
 Plasma 6 widget designed to switch between Plasma Activities and Virtual Desktops dynamically. It integrates seamlessly into your Plasma panel or sits directly on your desktop as an elegant navigation hub.
 
 Available on [Opendesktop.com](https://www.opendesktop.org/p/2365249/) as a plasmoid
+
 ---
 
 Features
