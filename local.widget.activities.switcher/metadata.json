@@ -3,7 +3,7 @@
         "Category": "Windows and Tasks",
         "Description": "Switch between Virtual Desktops and Plasma Activities dynamically from your panel or desktop.",
         "Icon": "preferences-desktop-virtual",
-        "Id": "com.jmc.activitydesktopswitcher",
+        "Id": "local.widget.activities.switcher",
         "Name": "Pill Activities Switcher",
         "KPackageStructure": "Plasma/Applet",
         "Version": "1.0"

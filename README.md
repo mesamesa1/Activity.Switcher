@@ -42,8 +42,8 @@ You can install the plasmoid locally using Plasma's package manager `kpackagetoo
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/com.jmc.activitydesktopswitcher.git
-cd com.jmc.activitydesktopswitcher
+git clone https://github.com/mesamesa1/Activity.Switcher.git
+cd Activity.Switcher
 
 # Install the widget
 kpackagetool6 -i .
@@ -54,7 +54,7 @@ Simply clone or extract the contents to your local Plasma plasmoids directory:
 
 ```bash
 mkdir -p ~/.local/share/plasma/plasmoids/
-cp -r com.jmc.activitydesktopswitcher ~/.local/share/plasma/plasmoids/
+cp -r local.widget.activities.switcher ~/.local/share/plasma/plasmoids/
 ```
 
 Then restart `plasmashell` to load the widget:
