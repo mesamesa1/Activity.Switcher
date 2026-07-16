@@ -79,8 +79,23 @@ PlasmoidItem {
         }
     }
 
+    property var activitiesModel: []
+
     TaskManager.ActivityInfo {
         id: actInfo
+        Component.onCompleted: root.activitiesModel = actInfo.runningActivities()
+    }
+
+    Timer {
+        interval: 1000
+        running: true
+        repeat: true
+        onTriggered: {
+            var current = actInfo.runningActivities();
+            if (JSON.stringify(root.activitiesModel) !== JSON.stringify(current)) {
+                root.activitiesModel = current;
+            }
+        }
     }
 
     Loader {
@@ -98,7 +113,7 @@ PlasmoidItem {
             width: parent.width
 
             Repeater {
-                model: actInfo.runningActivities()
+                model: root.activitiesModel
                 delegate: activityButtonDelegate
             }
         }
@@ -113,7 +128,7 @@ PlasmoidItem {
             height: parent.height
 
             Repeater {
-                model: actInfo.runningActivities()
+                model: root.activitiesModel
                 delegate: activityButtonDelegate
             }
         }

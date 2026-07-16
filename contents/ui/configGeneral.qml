@@ -24,8 +24,23 @@ KCM.SimpleKCM {
     property string cfg_activityColors
     property string cfg_activityIcons
 
+    property var activitiesModel: []
+
     TaskManager.ActivityInfo {
         id: actInfo
+        Component.onCompleted: root.activitiesModel = actInfo.runningActivities()
+    }
+
+    Timer {
+        interval: 1000
+        running: true
+        repeat: true
+        onTriggered: {
+            var current = actInfo.runningActivities();
+            if (JSON.stringify(root.activitiesModel) !== JSON.stringify(current)) {
+                root.activitiesModel = current;
+            }
+        }
     }
 
     // Helper functions for custom activity colors
@@ -118,7 +133,7 @@ KCM.SimpleKCM {
         CheckBox {
             id: colorUnselectedCheckbox
             Kirigami.FormData.label: "Color Unselected:"
-            text: "Apply custom color to unselected buttons"
+            text: "Apply color to unselected buttons"
         }
 
         RowLayout {
@@ -208,10 +223,15 @@ KCM.SimpleKCM {
             Kirigami.FormData.label: "Custom Activity Styles"
         }
 
-        Repeater {
-            model: actInfo.runningActivities()
+        ColumnLayout {
+            Kirigami.FormData.isSection: true
+            Layout.fillWidth: true
+            spacing: Kirigami.Units.smallSpacing
 
-            delegate: RowLayout {
+            Repeater {
+                model: root.activitiesModel
+
+                delegate: RowLayout {
                 spacing: Kirigami.Units.gridUnit * 0.5
                 
                 Kirigami.Icon {
@@ -298,6 +318,7 @@ KCM.SimpleKCM {
                         }
                     }
                 }
+            }
             }
         }
     }
