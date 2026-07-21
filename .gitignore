@@ -1,3 +1,7 @@
-*.kate-swp
 *.swp
-*~
+*.swo
+.DS_Store
+.gemini/
+*.log
+.idea/
+.vscode/

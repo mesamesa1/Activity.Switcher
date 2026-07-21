@@ -1,88 +1,46 @@
-Activities Switcher (KDE Plasma 6)
+# Pill Activities Switcher Widget
 
-![Activity Switcher Demo](screenshots/output.gif) ![Activity Switcher Demo](screenshots/output2.gif)
+[![KDE Plasma 6](https://img.shields.io/badge/KDE_Plasma-6.0+-3152A0?style=for-the-badge&logo=kde&logoColor=white)](https://kde.org/plasma-desktop/)
+[![QML](https://img.shields.io/badge/UI-QML%2FQt6-41CD52?style=for-the-badge&logo=qt&logoColor=white)](https://doc.qt.io/qt-6/qtqml-index.html)
+[![Category](https://img.shields.io/badge/Productivity-5AC8FA?style=for-the-badge&logo=workspace&logoColor=white)](https://github.com/PlasmaDrifter)
+[![License](https://img.shields.io/badge/License-GPLv2-blue.svg?style=for-the-badge)](LICENSE)
 
-Plasma 6 widget designed to switch between Plasma Activities desktops dynamically. It integrates seamlessly into your Plasma panel or sits directly on your desktop.
+A sleek, modern pill-shaped workspace Activity Switcher widget for KDE Plasma 6.
 
-Available on [Opendesktop.com](https://www.opendesktop.org/p/2365249/) as a plasmoid
+---
+
+## Previews
 
 ---
 
-Features
+## Features
 
-Flexible Layouts & Orientation
-  - Toggle between **Stacked (Vertical)** and **Side-by-Side (Horizontal)** flows.
-  - Automatically adapts to panel thickness or desktop constraints.
-  
-Shape & Size Customization
-  - Multiple button shapes: **Pill**, **Circle**, or **Rectangle**.
-  - Custom button widths, heights, scale ratios, and layout spacing.
+- **Pill-style**: visual switcher for KDE Plasma Activities
+- **One-click**: switching between active activity spaces
+- **Dynamic**: active state highlighting
+- **Compact**: panel and desktop widget modes
 
-Theming & Per-Activity Styling
-  - Custom **Color Picker** for each running activity.
-  - Option to apply custom colors to unselected buttons with custom opacity sliders.
-  - **Invert Selection Sizing**: Option to make unselected buttons expand on hover or selection, or shrink/grow based on active states.
+## Requirements
 
-Icon & Name Toggle
-  - Choose to show names, icons, or both.
-  - Comes with clean default vector bubble number icons (`1` and `2`) for your primary activities.
-  - Custom **Icon Picker** (using the standard KDE system icon dialog) to set individual activity icons.
+- **Environment**: KDE Plasma 6.0 or higher
+- **Framework**: Qt6 QML / Plasma Applet API
 
-Smooth Easing Animations
-  - Fully adjustable resize transition durations (from `0ms` up to `5000ms`) with smooth `OutCubic` easing behavior.
+## Installation
 
----
-![Activity Switcher](screenshots/Screenshot_20260711_083426.png)
----
-
-##  Installation
-
-### CLI Installation (Recommended)
-You can install the plasmoid locally using Plasma's package manager `kpackagetool6`:
-
-```bash
-# Clone the repository
-git clone https://github.com/mesamesa1/Activity.Switcher.git
-cd Activity.Switcher
-
-# Install the widget
-kpackagetool6 -i .
-```
-
-### Manual Installation
-Simply clone or extract the contents to your local Plasma plasmoids directory:
-
+### Option 1: Git Clone (Recommended)
 ```bash
 mkdir -p ~/.local/share/plasma/plasmoids/
-cp -r local.widget.activities.switcher ~/.local/share/plasma/plasmoids/
+git clone https://github.com/PlasmaDrifter/activities.switcher.git ~/.local/share/plasma/plasmoids/local.widget.activities.switcher
 ```
 
-Then restart `plasmashell` to load the widget:
+### Option 2: Plasma Package Installer
 ```bash
-plasmashell --replace &
+kpackagetool6 -i ~/.local/share/plasma/plasmoids/local.widget.activities.switcher
 ```
 
----
+Then right-click your desktop or panel $\rightarrow$ **Add Widgets...** and search for the widget name.
 
-Configuration Options
+## Credits & License
 
-Right-click the widget on your desktop or panel and choose **Configure Activity & Desktop Switcher...**:
-
-| Option | Type | Default | Description |
-|---|---|---|---|
-| **Display Name** | Checkbox | `False` | Show activity names in buttons. |
-| **Display Icon** | Checkbox | `False` | Show icons in buttons. |
-| **Color Unselected** | Checkbox | `True` | Apply custom color to unselected buttons. |
-| **Unselected Opacity** | Slider | `20%` | Transparency level for unselected buttons. |
-| **Invert Sizing** | Checkbox | `False` | Expand unselected buttons instead of the selected one. |
-| **Sizing Scale Ratio** | Slider | `130%` | Size multiplier for expanded buttons. |
-| **Orientation** | Dropdown | `Side-by-side` | Layout flow (Horizontal vs Vertical). |
-| **Button Shape** | Dropdown | `Pill` | Choose between Rectangle, Pill, or Circle shapes. |
-| **Button Dimensions** | Spinboxes | `40` x `24` | Pixels dimensions for button bounds. |
-| **Resize Animation** | Spinbox | `250ms` | Transition duration for pill scaling. |
-
----
-
-License
-
-This project is licensed under the GPL-3.0 License. Feel free to fork, customize, and share!
+- **Author / Maintainer**: PlasmaDrifter
+- **License**: Licensed under the [GPLv2](LICENSE).
